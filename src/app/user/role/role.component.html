@@ -1,0 +1,20 @@
+<div class="js" [@flyIn]='flyIn'>
+  <table class="table table-bordered table-hover">
+        <thead>
+          <tr >
+            <th style="text-align: center;">序号</th>
+            <th style="text-align: center;">角色名称</th>
+            <th style="text-align: center;">创建时间</th>
+            <th style="text-align: center;">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let p of rolelist' style="text-align: center;">
+            <th style="text-align: center;">{{p.postId}}</th>
+            <td>{{p.userName}}</td>
+            <td>{{p.postTime}}</td>
+            <td><i class="fa fa-pencil-square-o"></i><i class="icon iconfont icon-suo"></i><i class="icon iconfont icon-suokaiqi"></i><i class="icon iconfont icon-ren1"></i></td>
+          </tr>
+        </tbody>
+      </table>
+</div>

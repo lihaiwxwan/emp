@@ -1,0 +1,8 @@
+.top{background: black;color: white;position: fixed;width: 100%;}
+.top .weui-cell__bd i{font-size: 20px;margin-left: 10px;vertical-align: middle;}
+.top .weui-cell__ft{color: white;}
+.dropdown-menu{right: 10px;}
+.layui-nav{background: inherit;}
+.weui-cell{padding: 0 10px;}
+.layui-nav .layui-nav-child a{text-align: left;}
+.top .weui-cell__ft .layui-nav-item a span{width: 20px;height: 20px;float: right;display: inline-block;margin-left: 20px;background: #04BE02;}

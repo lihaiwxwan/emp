@@ -1,0 +1,28 @@
+
+<div class="ZZ" [@flyIn] = "flyIn">
+	<h1>组织架构</h1>
+	<div class="row">
+		<div class="col-md-4 col-sm-4">
+			<p-tree [value]="frameworklist" selectionMode="single" [(selection)]="selectedFile" (onNodeSelect)="nodeSelect($event)"></p-tree>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<div class="min-right">
+				<form>
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">名称</label>
+				    <input type="text" class="form-control" id="exampleInputEmail1" name="usermc" [(ngModel)]='usermc'>
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleInputPassword1">代码</label>
+				    <input type="text" class="form-control" name="cor" id="exampleInputPassword1" [(ngModel)]='cor'>
+				  </div>
+				  <button type="button" class="btn btn-primary">编辑</button>
+				  <button type="button" class="btn btn-success">新建</button>
+				  <button type="button" class="btn btn-danger">删除</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+</div>
+

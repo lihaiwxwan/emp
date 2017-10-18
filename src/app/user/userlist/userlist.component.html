@@ -1,0 +1,78 @@
+<div class="lb" [@flyIn] = "flyIn">
+	<!--<div class="form-horizontal">
+		<div class="form-group">
+		        
+		        <div class="col-sm-9">
+		          <input type="password" class="form-control" id="inputPassword" placeholder="用户名，昵称">
+		        </div>
+		        <button style="width:auto;height: 20px;margin-top: 5px;">搜索</button>
+		        <button type="button" class="btn btn-success"><i class="icon iconfont icon-ren"></i>创建用户</button>
+		</div>
+	</div>-->
+
+
+ <!--<table class="layui-table">
+  <thead>
+    <tr>
+      <th><input type="checkbox"></th>
+      <th>序号</th>
+      <th>用户名</th>
+      <th >注册时间</th>
+      <th>最后登录</th>
+      <th>操作</th>
+    </tr>
+    <tr *ngFor='let p of list;let i=index'>
+    	<th><input type="checkbox"></th>
+    	<td>{{p.id}}</td>
+    	<td>{{p.username}}</td>
+    	<td>{{p.logintime}}</td>
+    	<td>{{p.regtime}}</td>
+    	<td><i class="icon iconfont icon-pinglun"></i><i class="icon iconfont icon-delete2" (click)='remove(i)'></i></td>
+    </tr>
+  </thead>
+</table>-->
+<form class="form-vertical" role="form">
+		<div class="row">
+			<div class="col-sm-10">
+				<div class="input-group">
+					<input #gb class="form-control" type="text" pInputText size="50" placeholder="请输入用户名">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button" >
+							<i class="fa fa-search"></i>
+							搜索
+						</button>
+					</span>
+				</div>
+				
+			</div>
+			<div class="col-sm-2">
+				<button class="btn btn-success" type="button" (click)='touseradd()'>
+					<i class="fa fa-user"></i>
+					创建用户
+				</button>
+				
+			</div>
+			
+		</div>
+	</form>
+<!--<div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none">
+    <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+    <input #gb type="text" pInputText size="50" placeholder="Global Filter">
+</div>-->
+<p-dataTable [value]="list" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]"  [globalFilter]="gb" #dt>
+    <p-column field="id" header="序号"  [sortable]="true"></p-column>
+    <p-column field="username" header="用户名"  [sortable]="true"></p-column>
+    <p-column field="regtime" header="注册时间"  [sortable]="true"></p-column>
+    <p-column field="logintime" header="最后登录" [sortable]="true"></p-column>
+    <p-column header="操作" >
+        <ng-template let-col let-car="rowData" pTemplate="body">
+        	<a href="javascript:void(0);" (click)='updataUser(car.id)'>
+        		<i class="fa fa-pencil-square-o"></i>
+        	</a>
+            <a href="javascript:void(0);" (click)='deleteUser(car.id)'>
+        		<i class="fa fa-times"></i>
+        	</a>
+        </ng-template>
+    </p-column>
+</p-dataTable>
+</div>

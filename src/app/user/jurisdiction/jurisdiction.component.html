@@ -1,0 +1,27 @@
+<div class="qx" [@flyIn]='flyIn'>
+  <table class="table table-bordered table-hover">
+        <thead>
+          <tr >
+            <th style="text-align: center;">序号</th>
+            <th style="text-align: center;">标题</th>
+            <th style="text-align: center;">作者</th>
+            <th style="text-align: center;">日期</th>
+            <th style="text-align: center;">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let p of jurisdlist;let i=index' style="text-align: center;">
+            <th style="text-align: center;">{{p.postId}}</th>
+            <td>{{p.title}}</td>
+            <td>{{p.userName}}</td>
+            <td>{{p.postTime}}</td>
+            <td>
+            	<i class="fa fa-pencil-square-o"></i>
+            	<i class="icon iconfont icon-icon2"></i>
+            	<i class="icon iconfont icon-paixushang"></i>
+            	<i (click)='datalist(i)' class="fa fa-times"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

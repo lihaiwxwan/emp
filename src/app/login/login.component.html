@@ -1,0 +1,36 @@
+ <div class="form-box">
+<form name="myForm" #regForm='ngForm' id="myForm">
+	
+	<div class="form-box">
+		<h1>Emp-Admin</h1>
+  <div class="form-group">
+    <label for="exampleInputEmail1">用户名</label>
+    <input type="text" class="form-control" id="user" name="user" [(ngModel)]='student' #stu='ngModel' required="required" minlength='5' pattern="^[a-zA-Z0-9_]*$">
+    <div *ngIf='stu.pristine' class="alert alert-info">请输入用户名</div>
+    <div *ngIf='stu.invalid && stu.dirty' class="alert alert-danger">
+    	 <div *ngIf='stu.errors.required'>用户名不能为空</div>
+    	 <div *ngIf='stu.errors.minlength'>用户名长度必须大于等于5位</div>
+    	 <div *ngIf='stu.errors.pattern'>用户名必须为数字字母下划线</div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">密码</label>
+    <input type="password" class="form-control" id="userpoor" name="userpoor" [(ngModel)]='studentposs' #stuposs='ngModel' required="required" minlength='6'>
+    <div *ngIf='stuposs.pristine' class="alert alert-info">请输入密码</div>
+    <div *ngIf='stuposs.invalid && stuposs.dirty' class="alert alert-danger">
+    	 <div *ngIf='stuposs.errors.required'>密码不能为空</div>
+    	 <div *ngIf='stuposs.errors.minlength'>密码长度必须大于等于6位</div>
+    </div>
+  </div>
+  <div>
+  	<div class="checkbox">
+    <label>
+      <input type="checkbox">记住我
+    </label>
+  	</div>
+  	<button style="margin-right: 10px;" class="btn btn-success" type="submit" [disabled]="!regForm.form.valid" (click)='login()'>登录</button>
+  	<button type="button" class="btn btn-danger">忘记密码</button>
+  </div>
+  </div>
+</form>
+</div>

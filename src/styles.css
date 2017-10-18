@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~font-awesome/css/font-awesome.min.css";
+p{margin: 0;}
+a,a:visited,a:hover,a:active{text-decoration: none;color: #000000;cursor: pointer;}
+i{margin-right: 10px;}
+body{height: 100%;}
+
+
+/*引入primeng样式*/
+@import '~primeng/resources/primeng.min.css';
+@import '~primeng/resources/themes/bootstrap/theme.css';

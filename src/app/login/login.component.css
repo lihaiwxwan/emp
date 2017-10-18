@@ -1,0 +1,6 @@
+.ng-valid[required], .ng-valid.required  {border-left: 5px solid #42A948; /* green */}
+.ng-invalid:not(form)  {border-left: 5px solid #a94442; /* red */}
+form{overflow: hidden;padding-bottom: 10px;border-radius: 10px;margin: 10px;color: white;}
+form >p{background: #006EE6;line-height: 40px;padding-left: 10px;color: white;border-top-left-radius: 10px;border-top-right-radius: 10px;}
+form .form-box{padding: 30px;background: #333333;width:655px;margin: 5% auto;overflow: hidden;}
+h1{font-size: 25px;line-height: 30px;text-align: center;}

@@ -1,0 +1,11 @@
+
+<div class="left">
+<ul class="layui-nav layui-nav-tree layui-inline layui-nav-side" lay-filter="demo" style="margin-right: 10px;background: black;">
+  <li class="layui-nav-item" *ngFor='let p of navlist'>
+    <a href="javascript:;"><i [class]="p.icon"></i>{{p.name}}</a>
+    <dl class="layui-nav-child" *ngFor='let i of p.children'>
+      <dd><a href="javascript:;" [routerLink]='i.route'><i [class]="i.icon" style="color: #CCCCCC;margin-right: 10px;font-size: 15px;"></i>{{i.name}}</a></dd>
+    </dl>
+  </li>
+</ul>
+</div>
